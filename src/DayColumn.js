@@ -190,8 +190,9 @@ class DaySlot extends React.Component {
               ...xStyle,
               top: `${top}%`,
               height: `${height}%`,
-              [isRtl ? 'right' : 'left']: `${Math.max(0, xOffset)}%`,
-              width: `${width}%`
+              // add some place for selection this slot availability
+              [isRtl ? 'right' : 'left']: `${Math.max(0, xOffset) + 2}%`,
+              width: `${width - 2.5}%`
             }}
             title={(typeof label === 'string' ? label + ': ' : '') + title }
             onClick={(e) => this._select(event, e)}
