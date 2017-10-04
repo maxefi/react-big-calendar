@@ -10,6 +10,7 @@ export default function moveDate(action, date, View) {
       date = new Date()
       break;
     case navigate.DATE:
+      date = action;
       break;
     default:
       invariant(View && typeof View.navigate === 'function',
