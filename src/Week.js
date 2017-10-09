@@ -27,10 +27,10 @@ Week.navigate = (date, action) => {
   switch (action){
     case navigate.PREVIOUS:
       return dates.add(date, -1, 'week');
-
     case navigate.NEXT:
-      return dates.add(date, 1, 'week')
-
+      return dates.add(date, 1, 'week');
+    case navigate.DATE:
+      return dates.add(date, 1, 'week');
     default:
       return date;
   }
