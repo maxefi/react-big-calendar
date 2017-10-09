@@ -641,7 +641,7 @@ class Calendar extends React.Component {
 
  handleDrillDown = (date, view) => {
    if (view)
-     this.handleViewChange(view)
+     this.handleViewChange(view, date)
 
    this.handleNavigate(navigate.DATE, date)
  };
