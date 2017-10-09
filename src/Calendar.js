@@ -625,8 +625,7 @@ class Calendar extends React.Component {
    onNavigate(date, view, action)
  };
 
- handleViewChange = (view) => {
-   const { date } = this.props;
+ handleViewChange = (view, date) => {
    if (view !== this.props.view && isValidView(view, this.props))
      this.props.onView(view, date)
  };
