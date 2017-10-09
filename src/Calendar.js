@@ -625,7 +625,8 @@ class Calendar extends React.Component {
    onNavigate(date, view, action)
  };
 
- handleViewChange = (view, date) => {
+ handleViewChange = (view) => {
+   const { date } = this.props;
    if (view !== this.props.view && isValidView(view, this.props))
      this.props.onView(view, date)
  };
@@ -640,7 +641,7 @@ class Calendar extends React.Component {
 
  handleDrillDown = (date, view) => {
    if (view)
-     this.handleViewChange(view, date)
+     this.handleViewChange(view)
 
    this.handleNavigate(navigate.DATE, date)
  };
